@@ -1,0 +1,132 @@
+\documentclass[a4paper,10pt]{article}
+
+% Typography and layout
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage[margin=1.55cm]{geometry}
+\renewcommand{\baselinestretch}{1.05}
+\pagenumbering{gobble}
+
+% Improve ATS support
+\input{glyphtounicode}
+\pdfgentounicode=1 
+
+% Icons & symbols
+\usepackage{fontawesome5}
+
+% Links: hidden in print, yellow highlight on hover
+\usepackage[colorlinks=false,
+            pdfborderstyle={/S/U/W 0},
+            hidelinks]{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    pdfborder={0 0 0},
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black
+}
+\makeatletter
+\AtBeginDocument{%
+  \hypersetup{%
+    pdfhighlight=/I,
+    pdfborderstyle={/S/U/W 0},
+  }%
+}
+\makeatother
+
+% Section styling
+\usepackage{titlesec}
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0pt}
+  {}[\titlerule]
+
+% Lists
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, itemsep=2pt}
+
+%----------------------------------------
+\begin{document}
+
+\centerline{\Huge \bf Dario Loi}
+\vspace{6pt}
+\centerline{%
+\faIcon{envelope} \ \href{mailto:dario13.loi@gmail.com}{dario13.loi@gmail.com} \quad|\quad
+\faIcon{phone} \ (+39) 388 812 4560 \quad|\quad
+\faIcon{map-marker-alt} Roma, Italia \quad|\quad
+\faIcon{github} \ \href{https://github.com/dario-loi}{dario-loi} \quad|\quad
+\faIcon{linkedin} \ \href{https://www.linkedin.com/in/dario-loi/}{dario-loi}
+}
+
+%----------------------
+\section*{Education}
+\noindent
+\textbf{Sapienza University of Roma} \hfill Roma, Italia \\
+M.Sc. in Computer Science, GPA: \textbf{29.73/30} \hfill Sep 2023 -- Oct 2025 (expected) \\
+\emph{Percorso d'Eccellenza (Honors Program)} -- Thesis: \textbf{Overlapping Community Hiding with GNNs}. \\
+
+\noindent
+\textbf{Sapienza University of Roma} \hfill Roma, Italia \\
+B.Sc. in Applied Computer Science and AI, GPA: \textbf{28.40/30}, \textbf{110/110 cum laude} \hfill Sep 2020 -- Jul 2023 \\
+\emph{Percorso d'Eccellenza (Honors Program)} -- Thesis: \textbf{Motion Video Enhancement using Deep Learning}.  
+
+%----------------------
+\section*{Research \& Experience}
+\noindent
+\textbf{Research Assistant, AutoBench (LLM-as-a-judge)} \hfill Jul 2025 -- Present \\
+Enhanced benchmark robustness by modeling ranking as a graph (PageRank, RankCentrality).
+
+\noindent
+\textbf{M.Sc. Thesis – Overlapping Community Hiding} \hfill Nov 2024 -- Present \\
+Adversarial manipulation of social networks using \textbf{GNNs}, \textbf{Reinforcement Learning}, and HPC training.
+
+\noindent
+\textbf{Research Assistant, Interpretable AI for Malware Detection} \hfill Dec 2024 -- May 2025 \\
+Designed attack-graph generation with GNNs and Transformers; contributed to vulnerability classification.
+
+\noindent
+\textbf{Teaching Assistant -- Computer Architecture \& Operating Systems} \hfill May -- Sep 2024 \\
+Led tutorials on RISC-V programming, pipelining, memory hierarchies, and OS fundamentals.
+
+\noindent
+\textbf{Computer Vision Developer, Sapienza Flight Team} \hfill Sep 2023 -- Jun 2024 \\
+Implemented UAV real-time object detection (YOLOv8); deployed CI/CD pipelines with GitHub Actions.
+
+\noindent
+\textbf{Undergraduate Researcher -- Video Enhancement (Percorso d'Eccellenza)} \hfill Jan -- Jul 2023 \\
+Investigated deep learning techniques for motion video enhancement using convolutional neural networks (CNNs).
+%----------------------
+\section*{Publication}
+\noindent
+\textbf{A. D'Orazio, M.R. Briglia, D. Crisostomi, D. Loi, E. Rodolà, I. Masi},  
+\emph{Implicit Inversion Turns CLIP into a Decoder}, arXiv:2505.23161, 2025.\@ \href{https://arxiv.org/abs/2505.23161}{arxiv.org/abs/2505.23161}.
+
+%----------------------
+\section*{Selected Projects}
+\begin{itemize}
+    \item \textbf{Graph Neural Networks for POI Recommendation} -- Graph Transformer (+13.7\% top-20 accuracy) (\href{https://github.com/dario-loi/foursquare}{GitHub}).
+    \item \textbf{Cloud-Based Sentiment Analysis} -- BERT fine-tuning, AWS Lambda deployment (\href{https://github.com/dario-loi/cloud_computing_2025}{GitHub}).
+    \item \textbf{Model Meta-Unlearning} -- GNN-based meta-learning for selective forgetting (\href{https://github.com/dario-loi/unlearning}{GitHub}).
+    \item \textbf{StapleGL (Open Source)} -- C\texttt{++} OpenGL wrapper library, \textasciitilde40 GitHub stars (\href{https://github.com/dario-loi/staplegl}{GitHub}).
+\end{itemize}
+
+%----------------------
+\section*{Honors \& Events}
+\noindent
+\textbf{International Computer Science Competition}, 2025 -- Currently Participating in ICSC, at the Qualifications stage. \\
+\textbf{Xi’An Jiaotong Summer Camp (Huawei \& ZTE)}, 2025 -- Selected as 1 of 10 students from hundreds across 5 Sapienza departments. Focused on AI, telecommunications, and cybersecurity. \\
+\textbf{OxML 2025 – Representation Learning \& Generative AI, University of Oxford} -- Competitive international summer school in advanced AI research. \\
+\textbf{Deep Learning Workshop, FBK}, 2025 -- Intensive program at Bruno Kessler Foundation, covering optimization and generative models.
+
+%----------------------
+\section*{Skills}
+\noindent
+\textbf{AI/ML:} Deep Learning, Graph Neural Networks, Transformers, Reinforcement Learning \\
+\textbf{Tools:}  PyTorch, PyTorch Geometric, HuggingFace, HPC, CUDA, Docker, Git, FastAPI, Gymnasium, OpenCV\\
+\textbf{Systems/Programming:} C\texttt{++}, Python, RISC-V, Golang, OpenGL, SQL, Linux, Bash, Docker, \LaTeX\\
+\textbf{Languages:} Italian (native), English (C1, IELTS \& Cambridge B2)
+
+\end{document}
