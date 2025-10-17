@@ -1,0 +1,114 @@
+% This is a LaTeX template for an ICSC submission, based on a homework template by Lucas R. Ximenes (Jimeens)
+% Refactored for Dario Loi, M.Sc Computer Science, Sapienza University of Rome
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{solutionclass} % Using the original class as requested
+\usepackage{listings} % Add the listings package for code highlighting
+\usepackage{xcolor} % Required for defining custom colors
+
+% Define a custom Python style for the code listing
+\lstdefinestyle{pythonstyle}{
+    language=Python,
+    backgroundcolor=\color{gray!10},
+    commentstyle=\color{blue!30!black},
+    keywordstyle=\color{red!75!black},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{green!40!black},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+
+\pagestyle{plain}
+
+\begin{document}
+
+\pretitle
+{ICSC 2025 Submission}                          % ⟸ Main Title
+{Solutions to the Qualification Round}          % ⟸ Subtitle
+{Dario Loi} % ⟸ Author and Affiliation
+
+\makeatletter
+    \startcontents[sections]
+    \phantomsection
+    \chapter{Solutions}
+\makeatother
+
+    This document presents the solutions for the qualification round of the International Computer Science Competition (ICSC) 2025. Each section corresponds to a problem from the problem sheet. For programming problems, the source code is provided with a description and in-line comments, as per the submission guidelines. [1]
+
+    \divider
+
+    \section{Problem 1: Conceptual}
+    Here you can write the solution to the first conceptual problem. Explain your reasoning and the steps you took to arrive at the answer.
+
+    \begin{solution}[Solution to Problem 1]
+        This is where the detailed solution would go. For example, if the problem was about Big O notation, you could explain the analysis of the algorithm's complexity here.
+    \end{solution}
+
+    \section{Problem 2: Programming}
+    Here you would describe your approach to the programming problem.
+
+    \begin{solution}[Algorithm Description]
+        First, I identified the core requirements of the problem. My approach is to use a recursive backtracking algorithm to explore the solution space. The base case for the recursion is when a valid solution is found. I've chosen Python for its readability and extensive libraries.
+    \end{solution}
+
+    \begin{solution}[Source Code: Python]
+\begin{lstlisting}[style=pythonstyle]
+# Your Python code with in-line comments would go here
+def solve_problem_2(data):
+    """
+    This function implements the solution for Problem 2.
+    It takes 'data' as input and returns the result.
+    """
+    # Step 1: Initialize variables
+    result = 0
+
+    # Step 2: Main logic of the algorithm
+    for item in data:
+        # Process each item
+        result += item
+
+    # Step 3: Return the final result
+    return result
+
+# Example usage:
+# input_data = [1, 2, 3, 4, 5]
+# print(solve_problem_2(input_data))
+\end{lstlisting}
+    \end{solution}
+
+    \section{Problem 3: Advanced Topic}
+    This section could be for a more advanced problem, perhaps involving topics like machine learning or cryptography. [2]
+
+    \begin{solution}[Solution to Problem 3]
+        The solution to this problem involves applying the RSA encryption algorithm. The following equations demonstrate the key generation and encryption process.
+        \begin{equation}\label{eq: 1}
+            c \equiv m^e \pmod{n}
+        \end{equation}
+        Where 'c' is the ciphertext, 'm' is the message, and '(e, n)' is the public key.
+    \end{solution}
+
+    \divider
+
+    \section{Concluding Remarks}
+    This submission presents my solutions to the ICSC 2025 Qualification Round problems. The solutions have been explained, and the code has been commented to ensure clarity and reproducibility.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % The following commands add a footer with the original template author's credit.
+    % You may choose to keep or remove it.
+    \thispagestyle{fancyplain}
+    \fancyhead{}
+    \renewcommand{\headrulewidth}{0pt}
+    \rfoot{Template by L. R. Ximenes (Jimeens)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
